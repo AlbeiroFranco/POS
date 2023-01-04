@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using POS.Infrastrure.Pesistences.Context;
 
+
 namespace POS.Infrastructure.Extensions
 {
     public static class InjectionExtensions
@@ -13,8 +14,9 @@ namespace POS.Infrastructure.Extensions
 
             services.AddDbContext<PosContext>(
                 options => options.UseSqlServer(
-                    configuration.GetConnectionString("POSConnection"), b => b.MigrationsAssembly(assembly)), ServiceLifetime.Transient
-                );
+                    configuration.GetConnectionString("POSConnection"), b => b.MigrationsAssembly(assembly)), ServiceLifetime.Transient);
+
+            
 
             return services;
         }
