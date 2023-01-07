@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using POS.Infrastructure.Persistences.Interfaces;
+using POS.Infrastructure.Persistences.Respositories;
 using POS.Infrastrure.Pesistences.Context;
 
 
@@ -16,7 +18,7 @@ namespace POS.Infrastructure.Extensions
                 options => options.UseSqlServer(
                     configuration.GetConnectionString("POSConnection"), b => b.MigrationsAssembly(assembly)), ServiceLifetime.Transient);
 
-            
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             return services;
         }
