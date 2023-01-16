@@ -1,12 +1,13 @@
 ﻿using POS.Domain.Entities;
 using POS.Infrastructure.Persistences.Interfaces;
+using POS.Infrastrure.Pesistences.Context;
 
 namespace POS.Infrastructure.Persistences.Respositories
 {
     public class UnitOfWork : IUnitOfWork
     {
         private readonly PosContext _context;
-        public ICategoryRepository Category{ get; private set; }
+        public ICategoryRepository Category { get; private set; }
 
         public UnitOfWork(PosContext context)
         {

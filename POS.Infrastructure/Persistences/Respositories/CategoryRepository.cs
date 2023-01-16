@@ -3,6 +3,7 @@ using POS.Domain.Entities;
 using POS.Infrastructure.Commons.Bases.Request;
 using POS.Infrastructure.Commons.Bases.Response;
 using POS.Infrastructure.Persistences.Interfaces;
+using POS.Infrastrure.Pesistences.Context;
 using POS.Utilities.Static;
 
 namespace POS.Infrastructure.Persistences.Respositories
