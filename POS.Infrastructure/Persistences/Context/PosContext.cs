@@ -4,13 +4,13 @@ using System.Reflection;
 
 namespace POS.Infrastrure.Pesistences.Context;
 
-public partial class PosContext : DbContext
+public partial class POSContext : DbContext
 {
-    public PosContext()
+    public POSContext()
     {
     }
 
-    public PosContext(DbContextOptions<PosContext> options)
+    public POSContext(DbContextOptions<POSContext> options)
         : base(options)
     {
     }

@@ -29,7 +29,7 @@ namespace POS.Aplication.Services
             var response = new BaseResponse<BaseEntityResponse<CategoryResponseDto>>();
             var categories = await _unitOfWork.Category.ListCategories(filters);
 
-            if (categories is not null)
+            if (categories != null)
             {
                 response.IsSuccess = true;
                 response.Data = _mapper.Map<BaseEntityResponse<CategoryResponseDto>>(categories);
@@ -48,7 +48,7 @@ namespace POS.Aplication.Services
             var response = new BaseResponse<IEnumerable<CategorySelectResponseDto>>();
             var categories = await _unitOfWork.Category.ListSelectCategories();
 
-            if (categories is not null)
+            if (categories != null)
             {
                 response.IsSuccess = true;
                 response.Data = _mapper.Map<IEnumerable<CategorySelectResponseDto>>(categories);
@@ -67,7 +67,7 @@ namespace POS.Aplication.Services
             var response = new BaseResponse<CategoryResponseDto>();
             var category = await _unitOfWork.Category.CategoryById(categoryId);
 
-            if (category is not null)
+            if (category != null)
             {
                 response.IsSuccess = true;
                 response.Data = _mapper.Map<CategoryResponseDto>(category);
@@ -101,7 +101,7 @@ namespace POS.Aplication.Services
             if (response.Data)
             {
                 response.IsSuccess = true;
-                response.Message = ReplyMessage.MESSAGE_FAILED;
+                response.Message = ReplyMessage.MESSAGE_SAVE;
             }
             else
             {
@@ -117,7 +117,7 @@ namespace POS.Aplication.Services
             var response = new BaseResponse<bool>();
             var categoryEdit = await CategoryById(categoryId);
 
-            if(categoryEdit.Data is null)
+            if(categoryEdit.Data == null)
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
@@ -146,7 +146,7 @@ namespace POS.Aplication.Services
             var response = new BaseResponse<bool>();
             var category = await CategoryById(categoryId);
 
-            if(category.Data is null)
+            if(category.Data == null)
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;

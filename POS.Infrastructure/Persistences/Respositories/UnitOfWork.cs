@@ -6,10 +6,10 @@ namespace POS.Infrastructure.Persistences.Respositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly PosContext _context;
+        private readonly POSContext _context;
         public ICategoryRepository Category { get; private set; }
 
-        public UnitOfWork(PosContext context)
+        public UnitOfWork(POSContext context)
         {
             _context = context;
             Category = new CategoryRepository(_context);

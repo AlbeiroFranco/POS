@@ -1,6 +1,6 @@
 ﻿namespace POS.Infrastructure.Persistences.Interfaces
 {
-    internal interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
     }
 }

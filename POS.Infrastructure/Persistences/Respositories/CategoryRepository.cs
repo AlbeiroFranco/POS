@@ -8,10 +8,10 @@ using POS.Utilities.Static;
 
 namespace POS.Infrastructure.Persistences.Respositories
 {
-    internal class CategoryRepository : GenericRepository<Category>, ICategoryRepository
+    public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
-        private readonly PosContext _context;
-        public CategoryRepository(PosContext context)
+        private readonly POSContext _context;
+        public CategoryRepository(POSContext context)
         {
             _context = context;
         }
@@ -23,7 +23,7 @@ namespace POS.Infrastructure.Persistences.Respositories
                               where c.AuditDeleteUser == null && c.AuditDeleteDate == null
                               select c).AsNoTracking().AsQueryable();
 
-            if (filters.NumFilter is not null && !string.IsNullOrEmpty(filters.TextFilter))
+            if (filters.NumFilter != null && !string.IsNullOrEmpty(filters.TextFilter))
             {
                 switch (filters.NumFilter)
                 {
@@ -36,7 +36,7 @@ namespace POS.Infrastructure.Persistences.Respositories
                 }
             }
 
-            if (filters.StateFilter is not null)
+            if (filters.StateFilter != null)
             {
                 categories = categories.Where(x => x.State.Equals(filters.StateFilter));
             }
@@ -46,7 +46,7 @@ namespace POS.Infrastructure.Persistences.Respositories
                 categories = categories.Where(x => x.AuditCreateDate >= Convert.ToDateTime(filters.StartDate) && x.AuditCreateDate <= Convert.ToDateTime(filters.EndDate).AddDays(1));
             }
 
-            if (filters.Sort is not null) filters.Sort = "CategoryId";
+            if (filters.Sort == null) filters.Sort = "CategoryId";
 
             response.TotalRecords = await categories.CountAsync();
             response.Items = await Ordering(filters, categories, !(bool)filters.Download!).ToListAsync();
