@@ -28,7 +28,7 @@ namespace POS.Api.Controllers
             var response  = await _categoryApplication.ListSelectCategories();
             return Ok(response);
         }
-        [HttpGet("{CategoryId:int}")]
+        [HttpGet("{categoryId:int}")]
         public async Task<IActionResult> CategoryById(int categoryId)
         {
             var response = await _categoryApplication.CategoryById(categoryId);

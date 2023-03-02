@@ -8,7 +8,10 @@ namespace POS.Infrastructure.Persistences.Context.Configuration
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A0B83187C7F");
+            builder.HasKey(category => category.Id);
+
+            builder.Property(category => category.Id)
+                .HasColumnName("CategoryId");
 
             builder.Property(e => e.Name).HasMaxLength(100);
         }

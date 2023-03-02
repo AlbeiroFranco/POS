@@ -12,6 +12,7 @@ namespace POS.Aplication.Mappers
         public CategoryMappingsProfile()
         {
             CreateMap<Category, CategoryResponseDto>()
+                .ForMember(x => x.CategoryId, x => x.MapFrom(y => y.Id))
                 .ForMember(x => x.SatateCategory, x => x.MapFrom(y => y.State.Equals((int)StateTypes.Active) ? "Activo" : "Inactivo"))
                 .ReverseMap();
 
@@ -21,6 +22,7 @@ namespace POS.Aplication.Mappers
             CreateMap<CategoryRequestDto, Category>();
 
             CreateMap<Category, CategorySelectResponseDto>()
+                .ForMember(x => x.CategoryId, x => x.MapFrom(y => y.Id))
                 .ReverseMap();
 
 

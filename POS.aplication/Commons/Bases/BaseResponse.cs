@@ -13,6 +13,6 @@ namespace POS.Aplication.Commons.Bases
         public T? Data { get; set; }
         public string? Message { get; set; }
 
-        public IEnumerable<ValidationFailure>? Errors;
+        public IEnumerable<ValidationFailure>? Errors { get; set; }
     }
 }
