@@ -5,6 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 // Add services to the container.
+var cors = "Cors";
+
 builder.Services.AddInjectionInfrastructure(configuration);
 builder.Services.AddInjectionApplication(configuration);
 
@@ -13,7 +15,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: cors,
+        builder =>
+        {
+            builder.WithOrigins("*");
+            builder.AllowAnyOrigin();
+            builder.AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
+
+app.UseCors(cors);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -29,3 +44,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }
