@@ -22,6 +22,8 @@ namespace POS.Aplication.Extensions
 
             services.AddScoped<ICategoryApplication, CategoryApplication>();
 
+            services.AddScoped<IUserApplication, UserApplication>();
+
             return services;
         }
     }

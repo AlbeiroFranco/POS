@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using POS.Aplication.Dtos.Request;
+using POS.Aplication.Dtos.Category.Request;
 using POS.Aplication.Interfaces;
 using POS.Utilities.Static;
 

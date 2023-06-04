@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using POS.Aplication.Dtos.Request;
+using POS.Aplication.Dtos.Category.Request;
 
 namespace POS.Aplication.Validators.Category
 {

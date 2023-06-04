@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\sourceCode\\POS\\POS.Domain\\POS.Domain.csproj": {}
+    "C:\\SourceCode\\POS\\POS.Domain\\POS.Domain.csproj": {}
   },
   "projects": {
-    "C:\\sourceCode\\POS\\POS.Domain\\POS.Domain.csproj": {
+    "C:\\SourceCode\\POS\\POS.Domain\\POS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\sourceCode\\POS\\POS.Domain\\POS.Domain.csproj",
+        "projectUniqueName": "C:\\SourceCode\\POS\\POS.Domain\\POS.Domain.csproj",
         "projectName": "POS.Domain",
-        "projectPath": "C:\\sourceCode\\POS\\POS.Domain\\POS.Domain.csproj",
-        "packagesPath": "C:\\Users\\jose.franco\\.nuget\\packages\\",
-        "outputPath": "C:\\sourceCode\\POS\\POS.Domain\\obj\\",
+        "projectPath": "C:\\SourceCode\\POS\\POS.Domain\\POS.Domain.csproj",
+        "packagesPath": "C:\\Users\\Jose.franco\\.nuget\\packages\\",
+        "outputPath": "C:\\SourceCode\\POS\\POS.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jose.franco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Jose.franco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

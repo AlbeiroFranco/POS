@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using POS.Aplication.Commons.Bases;
-using POS.Aplication.Dtos.Request;
-using POS.Aplication.Dtos.Response;
+using POS.Aplication.Dtos.Category.Request;
+using POS.Aplication.Dtos.Category.Response;
 using POS.Aplication.Interfaces;
 using POS.Aplication.Validators.Category;
 using POS.Domain.Entities;

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using POS.Aplication.Dtos.Request;
+using POS.Aplication.Dtos.Category.Request;
 using POS.Aplication.Interfaces;
 using POS.Infrastructure.Commons.Bases.Request;
 

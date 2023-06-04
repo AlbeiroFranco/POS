@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using POS.Aplication.Dtos.Request;
-using POS.Aplication.Dtos.Response;
+using POS.Aplication.Dtos.Category.Request;
+using POS.Aplication.Dtos.Category.Response;
 using POS.Domain.Entities;
 using POS.Infrastructure.Commons.Bases.Response;
 using POS.Utilities.Static;
