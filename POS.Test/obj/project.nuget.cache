@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rimZfUVPQFbii7lBAV3n6+6tVzQ4w6/0OoWsUhNjDTwNYr2V+O+3X+H3oFYKysxfd446jVhH65LGtacOQl54RA==",
+  "dgSpecHash": "+2Oi36pCwEvaOBxj+2kcC1etbwIJttX44drgBBMwKxGx+BmubYPn3JLRkW4v+BLn6L9bDo/UMkpMkGjs7pGwnA==",
   "success": true,
   "projectFilePath": "C:\\SourceCode\\POS\\POS.Test\\POS.Test.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Jose.franco\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\Jose.franco\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\Jose.franco\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\Jose.franco\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.16\\microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",
     "C:\\Users\\Jose.franco\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\6.0.14\\microsoft.aspnetcore.mvc.testing.6.0.14.nupkg.sha512",
     "C:\\Users\\Jose.franco\\.nuget\\packages\\microsoft.aspnetcore.testhost\\6.0.14\\microsoft.aspnetcore.testhost.6.0.14.nupkg.sha512",
     "C:\\Users\\Jose.franco\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

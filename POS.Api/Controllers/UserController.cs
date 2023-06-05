@@ -25,15 +25,6 @@ namespace POS.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("Editar")]
-        public async Task<IActionResult> EditUser([FromBody] UserRequestDto requestDto)
-        {
-            var response = await _userApplication.e(requestDto);
-            return Ok(response);
-        }
-
-
-        [AllowAnonymous]
         [HttpPost("Generate/Token")]
         public async Task<IActionResult> GenerateToken([FromBody] TokenRequestDto requestDto)
         {

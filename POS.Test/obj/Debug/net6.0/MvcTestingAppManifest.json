@@ -1,5 +1,5 @@
 {
-  "POS.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\SourceCode\\POS\\POS.Api",
+  "POS.Api": "C:\\SourceCode\\POS\\POS.Api",
   "POS.Aplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\SourceCode\\POS\\POS.aplication",
   "POS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\SourceCode\\POS\\POS.Domain",
   "POS.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\SourceCode\\POS\\POS.Infrastructure",
