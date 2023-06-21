@@ -304,6 +304,7 @@ C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\FluentValidation.dll
 C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Testing.dll
 C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\Microsoft.AspNetCore.TestHost.dll
 C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -462,3 +463,4 @@ C:\SourceCode\POS\POS.Test\obj\Debug\net6.0\refint\POS.Test.dll
 C:\SourceCode\POS\POS.Test\obj\Debug\net6.0\POS.Test.pdb
 C:\SourceCode\POS\POS.Test\obj\Debug\net6.0\POS.Test.genruntimeconfig.cache
 C:\SourceCode\POS\POS.Test\obj\Debug\net6.0\ref\POS.Test.dll
+C:\SourceCode\POS\POS.Test\bin\Debug\net6.0\libman.json

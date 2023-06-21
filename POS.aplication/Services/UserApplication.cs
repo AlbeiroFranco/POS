@@ -54,6 +54,11 @@ namespace POS.Aplication.Services
             var account = _mapper.Map<User>(requestDto);
             account.Password = BC.HashPassword(account.Password);
 
+            if (requestDto.Image != null)
+            {
+                account.Image = await _unitOfWork.Storage.SaveFile(AzureContainers.USERS, requestDto.Image);
+            }
+
             response.Data = await _unitOfWork.User.RegisterAsync(account);
 
             if (response.Data)
@@ -61,6 +66,9 @@ namespace POS.Aplication.Services
                 response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_SAVE;
             }
+
+            response.IsSuccess = false;
+            response.Message = ReplyMessage.MESSAGE_FAILED;
 
             return response;
 
@@ -73,7 +81,7 @@ namespace POS.Aplication.Services
 
         private string GenerateToken(User user)
         {
-            var securutyKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]));
+            var securutyKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]!));
 
             var credentials = new SigningCredentials(securutyKey, SecurityAlgorithms.HmacSha256);
 
@@ -91,7 +99,7 @@ namespace POS.Aplication.Services
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Issuer"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(int.Parse(_configuration["Jwt:Expires"])),
+                expires: DateTime.UtcNow.AddHours(int.Parse(_configuration["Jwt:Expires"]!)),
                 notBefore: DateTime.UtcNow,
                 signingCredentials: credentials
                 );

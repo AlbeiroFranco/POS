@@ -1,4 +1,5 @@
-﻿using POS.Domain.Entities;
+﻿using Microsoft.Extensions.Configuration;
+using POS.Infrastructure.FileStorage;
 using POS.Infrastructure.Persistences.Interfaces;
 using POS.Infrastrure.Pesistences.Context;
 
@@ -11,11 +12,14 @@ namespace POS.Infrastructure.Persistences.Respositories
 
         public IUserRepository User { get; private set; }
 
-        public UnitOfWork(POSContext context)
+        public IAzureStorage Storage { get; private set; }
+
+        public UnitOfWork(POSContext context, IConfiguration configuration)
         {
             _context = context;
             Category = new CategoryRepository(_context);
             User = new UserRepository(_context);
+            Storage = new AzureStorage(configuration);
         }
 
         public void Dispose()
