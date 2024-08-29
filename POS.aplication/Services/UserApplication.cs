@@ -106,5 +106,41 @@ namespace POS.Aplication.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        public async Task<BaseResponse<bool>> UpdateUser(UserRequestDto requestDto)
+        {
+            var response = new BaseResponse<bool>();
+            var user = await _unitOfWork.User.GetByIdAsync(requestDto.UserId);
+
+            if (user == null)
+            {
+                response.IsSuccess = false;
+                response.Message = "Usuario no encontrado.";
+                return response;
+            }
+
+            _mapper.Map(requestDto, user);
+
+            if (!string.IsNullOrEmpty(requestDto.Password))
+                user.Password = BC.HashPassword(requestDto.Password);
+
+            if (requestDto.Image != null)
+                user.Image = await _unitOfWork.Storage.SaveFile(AzureContainers.USERS, requestDto.Image);
+
+            response.Data = await _unitOfWork.User.EditAsync(user);
+
+            if (response.Data)
+            {
+                response.IsSuccess = true;
+                response.Message = "Usuario actualizado correctamente.";
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = "Ha fallado la actualizacion del usuario.";
+            }
+
+            return response;
+        }
     }
 }
