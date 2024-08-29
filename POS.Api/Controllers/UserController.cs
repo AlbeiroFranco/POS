@@ -25,6 +25,14 @@ namespace POS.Api.Controllers
         }
 
         [AllowAnonymous]
+        [HttpPost("Update")]
+        public async Task<IActionResult> UpdateUser([FromForm] UserRequestDto requestDto)
+        {
+            var response = await _userApplication.UpdateUser(requestDto);
+            return Ok(response);
+        }
+
+        [AllowAnonymous]
         [HttpPost("Generate/Token")]
         public async Task<IActionResult> GenerateToken([FromBody] TokenRequestDto requestDto)
         {
